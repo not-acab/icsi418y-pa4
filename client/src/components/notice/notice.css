@@ -1,0 +1,33 @@
+.notice {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.notice.success {
+  color: var(--success);
+  background: rgba(31, 157, 107, 0.1);
+}
+
+.notice.error {
+  color: var(--error);
+  background: rgba(214, 69, 91, 0.1);
+}
+
+.notice.alert {
+  color: var(--warning);
+  background: rgba(217, 142, 4, 0.14);
+}
+
+.notice-link {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.notice-link:hover {
+  opacity: 0.8;
+}

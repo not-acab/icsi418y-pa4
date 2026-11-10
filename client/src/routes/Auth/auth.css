@@ -1,0 +1,22 @@
+.auth {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+@media (max-width: 640px) {
+  .auth {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+.auth-divider {
+  align-self: center;
+  justify-self: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 600;
+}

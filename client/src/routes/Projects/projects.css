@@ -1,0 +1,58 @@
+/* Page layout + toolbar for the projects screen */
+.projects {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.projects-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--ink-soft);
+}
+
+.projects-search {
+  flex: 1 1 220px;
+}
+
+.projects-search:focus-within {
+  border-color: var(--accent);
+}
+
+.projects-search input {
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  outline: none;
+}
+
+.projects-search input {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 520px) {
+  .projects-toolbar .multi-select {
+    flex: 1;
+  }
+
+  .projects-toolbar .multi-select-button {
+    width: 100%;
+  }
+}

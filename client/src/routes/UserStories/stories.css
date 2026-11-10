@@ -1,0 +1,42 @@
+.stories {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stories-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stories-back {
+  align-self: flex-start;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.stories-back:hover {
+  text-decoration: underline;
+}
+
+.stories-project-select {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.stories-project-select:hover,
+.stories-project-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}

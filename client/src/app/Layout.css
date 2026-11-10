@@ -1,0 +1,66 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+.page-header p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.tech-stack {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tech-stack-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-stack-logo {
+  width: 18px;
+  height: 18px;
+}
+
+.logout {
+  margin-left: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: var(--accent-hover);
+}

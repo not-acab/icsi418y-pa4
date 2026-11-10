@@ -1,0 +1,308 @@
+/* ---------- Toolbar (search + status filter) ---------- */
+
+.stories-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.stories-search {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--ink-soft);
+}
+
+.stories-search:focus-within {
+  border-color: var(--accent);
+}
+
+.stories-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  outline: none;
+}
+
+/* ---------- Story list / card ---------- */
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.story-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(59, 73, 223, 0.08);
+}
+
+.story-card.is-done {
+  background: var(--surface-alt);
+}
+
+.story-card.is-done .story-head h3 {
+  color: var(--ink-soft);
+}
+
+.story-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.story-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.story-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.story-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.priority-high {
+  color: var(--error);
+  background: rgba(214, 69, 91, 0.12);
+}
+
+.priority-medium {
+  color: var(--warning);
+  background: rgba(217, 142, 4, 0.14);
+}
+
+.priority-low {
+  color: var(--success);
+  background: rgba(31, 157, 107, 0.12);
+}
+
+.story-status-to-do {
+  color: var(--ink-soft);
+  background: rgba(91, 97, 120, 0.14);
+}
+
+.story-status-in-progress {
+  color: var(--accent);
+  background: rgba(59, 73, 223, 0.1);
+}
+
+.story-status-done {
+  color: var(--success);
+  background: rgba(31, 157, 107, 0.12);
+}
+
+.story-description {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.story-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.story-foot .label {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.avatar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(59, 73, 223, 0.1);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.story-assignee {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.story-assignee.is-unassigned {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ---------- Three dot menu ---------- */
+
+.story-menu {
+  position: relative;
+  flex: none;
+}
+
+.story-menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin: -4px -8px 0 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.story-menu-button:hover,
+.story-menu-button[aria-expanded="true"] {
+  background: var(--surface-alt);
+  color: var(--ink);
+}
+
+.story-menu-list {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  z-index: 20;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(27, 33, 64, 0.15);
+}
+
+.story-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.story-menu-item:hover {
+  background: var(--surface-alt);
+}
+
+.story-menu-item.is-danger {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.story-menu-item.is-danger:hover {
+  background: rgba(214, 69, 91, 0.08);
+}
+
+/* ---------- Forms / confirm dialog ---------- */
+
+.story-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.confirm-card {
+  align-items: center;
+  text-align: center;
+}
+
+.confirm-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(214, 69, 91, 0.1);
+  color: var(--error);
+  font-size: 1.6rem;
+}
+
+.confirm-text {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.btn-delete {
+  background: var(--error);
+  color: #fff;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #bf3249;
+}
+
+@media (max-width: 520px) {
+  .stories-toolbar .multi-select {
+    flex: 1;
+  }
+
+  .stories-toolbar .multi-select-button {
+    width: 100%;
+  }
+
+  .story-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .story-form-actions .btn {
+    width: 100%;
+  }
+}
